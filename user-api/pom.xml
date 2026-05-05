@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+            <groupId>com.sagur.drivemate</groupId>
+            <artifactId>user</artifactId>
+            <version>0.0.3</version>
+	</parent>
+
+	<artifactId>user-api</artifactId>
+	<packaging>jar</packaging>
+
+	<name>User Api</name>
+
+	<dependencies>
+
+            <dependency>
+		<groupId>com.sagur.drivemate</groupId>
+		<artifactId>common-web</artifactId>
+		<version>${project.version}</version>
+	    </dependency>
+	    <dependency>
+		<groupId>com.sagur.drivemate</groupId>
+		<artifactId>user-repository</artifactId>
+		<version>${project.version}</version>
+            </dependency>
+	    <dependency>
+		<groupId>com.sagur.drivemate</groupId>
+		<artifactId>document-service</artifactId>
+		<version>${project.version}</version>
+	    </dependency>
+
+	</dependencies>
+
+</project>
