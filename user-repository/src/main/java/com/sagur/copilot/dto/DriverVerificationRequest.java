@@ -1,8 +1,8 @@
-package com.sagur.copilot.dto;
+package com.sagur.product.common.utils.dto;
 
-import com.sagur.copilot.exception.BusinessException;
+import com.sagur.product.common.utils.exceptions.BusinessException;
 import com.sagur.copilot.model.User;
-import com.sagur.copilot.utils.StringUtil;
+import com.sagur.product.common.utils.utility.StringUtil;
 
 import lombok.Data;
 

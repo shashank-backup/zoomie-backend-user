@@ -7,10 +7,10 @@ import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
-import com.sagur.drivemate.common.config.ApplicationContextProvider;
+import com.sagur.product.common.config.ApplicationContextProvider;
 import com.sagur.copilot.event.UserRegistrationEvent;
-import com.sagur.copilot.exception.BusinessException;
-import com.sagur.drivemate.common.config.json.JsonUtil;
+import com.sagur.product.common.utils.exceptions.BusinessException;
+import com.sagur.product.common.config.json.JsonUtil;
 
 import lombok.extern.slf4j.Slf4j;
 

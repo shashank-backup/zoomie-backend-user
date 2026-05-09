@@ -1,10 +1,10 @@
-package com.sagur.copilot.dto;
+package com.sagur.product.common.utils.dto;
 
 import java.time.LocalDate;
 import jakarta.validation.constraints.NotNull;
 
-import com.sagur.copilot.enums.Gender;
-import com.sagur.copilot.enums.RoleName;
+import com.sagur.product.common.utils.enums.Gender;
+import com.sagur.product.common.utils.enums.RoleName;
 import com.sagur.copilot.model.User;
 import com.sagur.copilot.model.UserProfile;
 import com.sagur.copilot.util.UserUtil;

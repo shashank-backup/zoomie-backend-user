@@ -6,9 +6,9 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sagur.copilot.enums.OtpType;
-import com.sagur.copilot.response.ResponseUtil;
-import com.sagur.copilot.response.dto.ResponseDTO;
+import com.sagur.product.common.utils.enums.OtpType;
+import com.sagur.product.common.web.response.ResponseUtil;
+import com.sagur.product.common.web.response.dto.ResponseDTO;
 import com.sagur.copilot.service.OtpDetailService;
 import com.sagur.copilot.user.controller.OtpDetailController;
 

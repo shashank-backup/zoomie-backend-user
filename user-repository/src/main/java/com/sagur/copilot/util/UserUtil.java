@@ -5,8 +5,8 @@ import java.util.Set;
 
 import org.springframework.util.CollectionUtils;
 
-import com.sagur.copilot.enums.RoleName;
-import com.sagur.copilot.exception.BusinessException;
+import com.sagur.product.common.utils.enums.RoleName;
+import com.sagur.product.common.utils.exceptions.BusinessException;
 import com.sagur.copilot.model.Role;
 
 public class UserUtil {

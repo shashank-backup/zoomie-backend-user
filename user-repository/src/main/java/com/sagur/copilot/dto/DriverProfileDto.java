@@ -1,6 +1,6 @@
-package com.sagur.copilot.dto;
+package com.sagur.product.common.utils.dto;
 
-import com.sagur.copilot.enums.DriverStatus;
+import com.sagur.product.common.utils.enums.DriverStatus;
 import com.sagur.copilot.model.User;
 import com.sagur.copilot.user.model.Address;
 

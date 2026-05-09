@@ -9,20 +9,20 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.sagur.copilot.constants.CommonConstant;
-import com.sagur.copilot.document.dto.DocumentContext;
-import com.sagur.copilot.document.model.Document;
-import com.sagur.copilot.document.service.DocumentService;
-import com.sagur.copilot.dto.UserProfileDto;
-import com.sagur.copilot.exception.BusinessException;
+import com.sagur.product.common.utils.constants.CommonConstant;
+import com.sagur.product.common.document.dto.DocumentContext;
+import com.sagur.product.common.document.model.Document;
+import com.sagur.product.common.document.service.DocumentService;
+import com.sagur.product.common.utils.dto.UserProfileDto;
+import com.sagur.product.common.utils.exceptions.BusinessException;
 import com.sagur.copilot.model.User;
 import com.sagur.copilot.model.UserProfile;
 import com.sagur.copilot.repository.UserProfileRepository;
 import com.sagur.copilot.service.UserProfileService;
 import com.sagur.copilot.service.UserService;
-import com.sagur.copilot.web.config.context.UserContextProvider;
+import com.sagur.product.common.web.config.context.UserContextProvider;
 import com.sagur.product.generic.component.service.impl.AbstractService;
-import com.sagur.copilot.web.file.ReferralCodeGenerator;
+import com.sagur.product.common.web.file.ReferralCodeGenerator;
 
 import lombok.extern.slf4j.Slf4j;
 

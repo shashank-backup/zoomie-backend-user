@@ -9,9 +9,9 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.sagur.copilot.document.dto.DocumentContext;
-import com.sagur.copilot.document.model.Document;
-import com.sagur.copilot.dto.UserProfileDto;
+import com.sagur.product.common.document.dto.DocumentContext;
+import com.sagur.product.common.document.model.Document;
+import com.sagur.product.common.utils.dto.UserProfileDto;
 import com.sagur.copilot.model.UserProfile;
 import com.sagur.product.generic.component.service.GenericService;
 

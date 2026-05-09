@@ -1,4 +1,4 @@
-package com.sagur.copilot.dto;
+package com.sagur.product.common.utils.dto;
 
 import java.util.List;
 

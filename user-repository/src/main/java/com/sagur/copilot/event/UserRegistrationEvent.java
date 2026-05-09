@@ -2,7 +2,7 @@ package com.sagur.copilot.event;
 
 import java.util.Set;
 
-import com.sagur.copilot.enums.Gender;
+import com.sagur.product.common.utils.enums.Gender;
 import com.sagur.copilot.model.Role;
 import com.sagur.copilot.model.User;
 

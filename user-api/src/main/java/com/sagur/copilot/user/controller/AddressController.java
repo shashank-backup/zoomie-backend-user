@@ -16,10 +16,10 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-import com.sagur.copilot.dto.DriverProfileDto;
-import com.sagur.copilot.dto.DriverVerificationRequest;
-import com.sagur.copilot.response.dto.ResponseDTO;
-import com.sagur.copilot.web.config.util.constant.SwaggerConstant;
+import com.sagur.product.common.utils.dto.DriverProfileDto;
+import com.sagur.product.common.utils.dto.DriverVerificationRequest;
+import com.sagur.product.common.web.response.dto.ResponseDTO;
+import com.sagur.product.common.web.config.util.constant.SwaggerConstant;
 import com.sagur.product.generic.component.rsql.SearchWrapper;
 import com.sagur.copilot.user.model.Address;
 
@@ -70,5 +70,5 @@ public interface AddressController {
   @Operation(security = {@SecurityRequirement(name = SwaggerConstant.AUTHORIZATION_SCOPE_DEFAULT, scopes = {"API_Address_feat_findDriverProfileByUsername"})}, tags = {
       "AddressController"})
   ResponseDTO<DriverProfileDto> findDriverProfileByUsername(
-      @Parameter(description = "username of User", name = "username", required = true) @RequestParam(required = true) String username);
+      @Parameter(description = "username of User", name = "username", required = true) @RequestParam String username);
 }

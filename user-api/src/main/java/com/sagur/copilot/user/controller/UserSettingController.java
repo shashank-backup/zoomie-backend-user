@@ -17,9 +17,9 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 import com.sagur.copilot.model.UserSetting;
-import com.sagur.copilot.response.dto.ResponseDTO;
-import com.sagur.copilot.web.config.context.UserContext;
-import com.sagur.copilot.web.config.util.constant.SwaggerConstant;
+import com.sagur.product.common.web.response.dto.ResponseDTO;
+import com.sagur.product.common.web.config.context.UserContext;
+import com.sagur.product.common.web.config.util.constant.SwaggerConstant;
 
 @FeignClient(name = "UserSettingController", url = "${user-service-url}", path = "UserSetting", primary = false)
 @Tag(name = "UserSettingController", description = "APIs related to UserSetting")

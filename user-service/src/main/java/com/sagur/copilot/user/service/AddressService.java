@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sagur.copilot.dto.DriverProfileDto;
-import com.sagur.copilot.dto.DriverVerificationRequest;
+import com.sagur.product.common.utils.dto.DriverProfileDto;
+import com.sagur.product.common.utils.dto.DriverVerificationRequest;
 import com.sagur.copilot.user.model.Address;
 import com.sagur.product.generic.component.service.GenericService;
 

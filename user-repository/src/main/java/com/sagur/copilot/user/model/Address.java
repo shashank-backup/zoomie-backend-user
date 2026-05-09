@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 import org.hibernate.envers.Audited;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import com.sagur.copilot.constants.Prefix;
+import com.sagur.product.common.utils.constants.Prefix;
 import com.sagur.copilot.model.User;
 import com.sagur.product.generic.component.model.BaseEntity;
 

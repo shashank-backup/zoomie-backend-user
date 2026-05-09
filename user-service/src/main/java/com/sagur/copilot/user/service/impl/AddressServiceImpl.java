@@ -5,10 +5,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sagur.copilot.dto.DriverProfileDto;
-import com.sagur.copilot.dto.DriverVerificationRequest;
-import com.sagur.copilot.exception.BusinessException;
-import com.sagur.copilot.exception.UserNotFoundException;
+import com.sagur.product.common.utils.dto.DriverProfileDto;
+import com.sagur.product.common.utils.dto.DriverVerificationRequest;
+import com.sagur.product.common.utils.exceptions.BusinessException;
+import com.sagur.product.common.utils.exceptions.UserNotFoundException;
 import com.sagur.copilot.model.User;
 import com.sagur.copilot.service.UserProfileService;
 import com.sagur.copilot.service.UserService;

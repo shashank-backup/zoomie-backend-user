@@ -6,11 +6,11 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sagur.copilot.dto.DriverVerificationRequest;
-import com.sagur.copilot.exception.UserNotFoundException;
+import com.sagur.product.common.utils.dto.DriverVerificationRequest;
+import com.sagur.product.common.utils.exceptions.UserNotFoundException;
 import com.sagur.copilot.model.User;
-import com.sagur.copilot.response.ResponseUtil;
-import com.sagur.copilot.response.dto.ResponseDTO;
+import com.sagur.product.common.web.response.ResponseUtil;
+import com.sagur.product.common.web.response.dto.ResponseDTO;
 import com.sagur.copilot.service.UserService;
 import com.sagur.copilot.user.controller.UserController;
 

@@ -19,9 +19,9 @@ import org.hibernate.envers.Audited;
 import org.hibernate.envers.NotAudited;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import com.sagur.copilot.constants.ColumnDefinitionConstant;
-import com.sagur.copilot.constants.Constants;
-import com.sagur.copilot.enums.Gender;
+import com.sagur.product.common.utils.constants.ColumnDefinitionConstant;
+import com.sagur.product.common.utils.constants.Constants;
+import com.sagur.product.common.utils.enums.Gender;
 import com.sagur.product.generic.component.model.BaseEntity;
 
 import lombok.Data;

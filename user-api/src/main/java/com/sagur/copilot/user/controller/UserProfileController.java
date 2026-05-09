@@ -16,10 +16,10 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-import com.sagur.copilot.document.model.Document;
-import com.sagur.copilot.dto.UserProfileDto;
-import com.sagur.copilot.response.dto.ResponseDTO;
-import com.sagur.copilot.web.config.util.constant.SwaggerConstant;
+import com.sagur.product.common.document.model.Document;
+import com.sagur.product.common.utils.dto.UserProfileDto;
+import com.sagur.product.common.web.response.dto.ResponseDTO;
+import com.sagur.product.common.web.config.util.constant.SwaggerConstant;
 
 @FeignClient(name = "UserProfileController", url = "${user-service-url}", path = "UserProfile", primary = false)
 @Tag(name = "UserProfileController", description = "APIs related to UserProfile")

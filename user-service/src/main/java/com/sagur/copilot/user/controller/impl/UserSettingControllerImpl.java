@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sagur.copilot.model.UserSetting;
-import com.sagur.copilot.response.ResponseUtil;
-import com.sagur.copilot.response.dto.ResponseDTO;
+import com.sagur.product.common.web.response.ResponseUtil;
+import com.sagur.product.common.web.response.dto.ResponseDTO;
 import com.sagur.copilot.service.UserSettingService;
 import com.sagur.copilot.user.controller.UserSettingController;
-import com.sagur.copilot.web.audit.AuditActionType;
-import com.sagur.copilot.web.audit.Auditable;
-import com.sagur.copilot.web.config.context.UserContext;
-import com.sagur.copilot.web.config.context.UserContextProvider;
+import com.sagur.product.common.web.audit.AuditActionType;
+import com.sagur.product.common.web.audit.Auditable;
+import com.sagur.product.common.web.config.context.UserContext;
+import com.sagur.product.common.web.config.context.UserContextProvider;
 
 import lombok.extern.slf4j.Slf4j;
 

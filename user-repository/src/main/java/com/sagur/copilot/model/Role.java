@@ -10,8 +10,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
-import com.sagur.copilot.constants.Constants;
-import com.sagur.copilot.enums.RoleName;
+import com.sagur.product.common.utils.constants.Constants;
+import com.sagur.product.common.utils.enums.RoleName;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

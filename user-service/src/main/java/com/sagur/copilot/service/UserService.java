@@ -3,9 +3,9 @@ package com.sagur.copilot.service;
 import java.util.List;
 import java.util.Optional;
 
-import com.sagur.copilot.dto.DriverVerificationRequest;
-import com.sagur.copilot.dto.UserAuthDto;
-import com.sagur.copilot.dto.UserProfileDto;
+import com.sagur.product.common.utils.dto.DriverVerificationRequest;
+import com.sagur.product.common.utils.dto.UserAuthDto;
+import com.sagur.product.common.utils.dto.UserProfileDto;
 import com.sagur.copilot.model.Role;
 import com.sagur.copilot.model.User;
 

@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.sagur.copilot.document.dto.DocumentContext;
-import com.sagur.copilot.document.model.Document;
-import com.sagur.copilot.dto.UserProfileDto;
-import com.sagur.copilot.response.ResponseUtil;
-import com.sagur.copilot.response.dto.ResponseDTO;
+import com.sagur.product.common.document.dto.DocumentContext;
+import com.sagur.product.common.document.model.Document;
+import com.sagur.product.common.utils.dto.UserProfileDto;
+import com.sagur.product.common.web.response.ResponseUtil;
+import com.sagur.product.common.web.response.dto.ResponseDTO;
 import com.sagur.copilot.service.UserProfileService;
 import com.sagur.copilot.user.controller.UserProfileController;
-import com.sagur.copilot.web.audit.AuditActionType;
-import com.sagur.copilot.web.audit.Auditable;
+import com.sagur.product.common.web.audit.AuditActionType;
+import com.sagur.product.common.web.audit.Auditable;
 
 import lombok.extern.slf4j.Slf4j;
 

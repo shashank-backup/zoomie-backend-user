@@ -1,6 +1,6 @@
 package com.sagur.copilot.service;
 
-import com.sagur.copilot.enums.OtpType;
+import com.sagur.product.common.utils.enums.OtpType;
 
 public interface OtpDetailService {
 

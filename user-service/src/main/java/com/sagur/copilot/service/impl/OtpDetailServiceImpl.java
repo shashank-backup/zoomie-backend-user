@@ -7,14 +7,14 @@ import java.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sagur.copilot.constants.CommonConstant;
-import com.sagur.copilot.constants.ExceptionMsgConstant;
-import com.sagur.copilot.enums.OtpType;
-import com.sagur.copilot.exception.BadCredentialsException;
+import com.sagur.product.common.utils.constants.CommonConstant;
+import com.sagur.product.common.utils.constants.ExceptionMsgConstant;
+import com.sagur.product.common.utils.enums.OtpType;
+import com.sagur.product.common.utils.exceptions.BadCredentialsException;
 import com.sagur.copilot.model.OtpDetail;
 import com.sagur.copilot.repository.OtpDetailRepository;
 import com.sagur.copilot.service.OtpDetailService;
-import com.sagur.copilot.utils.Validate;
+import com.sagur.product.common.utils.utility.Validate;
 
 import lombok.extern.slf4j.Slf4j;
 
