@@ -17,7 +17,7 @@ import com.sagur.drivemate.user.dto.UserProfileDto;
 import com.sagur.product.common.utils.exceptions.BusinessException;
 import com.sagur.drivemate.user.model.User;
 import com.sagur.drivemate.user.model.UserProfile;
-import com.sagur.copilot.repository.UserProfileRepository;
+import com.sagur.drivemate.user.repository.UserProfileRepository;
 import com.sagur.drivemate.user.service.UserProfileService;
 import com.sagur.drivemate.user.service.UserService;
 import com.sagur.product.common.web.config.context.UserContextProvider;

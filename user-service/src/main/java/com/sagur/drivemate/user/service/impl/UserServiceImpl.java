@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sagur.drivemate.user.model.User;
-import com.sagur.copilot.repository.UserRepository;
+import com.sagur.drivemate.user.repository.UserRepository;
 import com.sagur.drivemate.user.service.RoleService;
 import com.sagur.drivemate.user.service.UserService;
 import com.sagur.drivemate.user.dto.UserAuthDto;

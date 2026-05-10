@@ -7,7 +7,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.sagur.drivemate.user.model.Role;
-import com.sagur.copilot.repository.RoleRepository;
+import com.sagur.drivemate.user.repository.RoleRepository;
 import com.sagur.drivemate.user.service.RoleService;
 
 @Service

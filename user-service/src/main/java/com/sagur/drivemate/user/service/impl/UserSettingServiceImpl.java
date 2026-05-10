@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sagur.drivemate.user.model.UserSetting;
-import com.sagur.copilot.repository.UserSettingRepository;
+import com.sagur.drivemate.user.repository.UserSettingRepository;
 import com.sagur.drivemate.user.service.UserSettingService;
 import com.sagur.product.generic.component.service.impl.AbstractService;
 

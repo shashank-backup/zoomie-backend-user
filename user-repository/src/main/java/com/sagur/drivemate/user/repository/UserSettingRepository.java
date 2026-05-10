@@ -1,4 +1,4 @@
-package com.sagur.copilot.repository;
+package com.sagur.drivemate.user.repository;
 
 import org.springframework.stereotype.Repository;
 

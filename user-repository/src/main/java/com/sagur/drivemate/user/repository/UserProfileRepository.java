@@ -1,4 +1,4 @@
-package com.sagur.copilot.repository;
+package com.sagur.drivemate.user.repository;
 
 import java.util.Optional;
 

@@ -11,7 +11,7 @@ import com.sagur.product.common.utils.constants.ExceptionMsgConstant;
 import com.sagur.drivemate.user.enums.OtpType;
 import com.sagur.product.common.utils.exceptions.BadCredentialsException;
 import com.sagur.drivemate.user.model.OtpDetail;
-import com.sagur.copilot.repository.OtpDetailRepository;
+import com.sagur.drivemate.user.repository.OtpDetailRepository;
 import com.sagur.drivemate.user.service.OtpDetailService;
 import com.sagur.product.common.utils.utility.Validate;
 
