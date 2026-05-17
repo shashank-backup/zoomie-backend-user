@@ -9,7 +9,6 @@ import com.sagur.drivemate.user.dto.DriverProfileDto;
 import com.sagur.drivemate.user.dto.DriverVerificationRequest;
 import com.sagur.product.common.utils.exceptions.BusinessException;
 import com.sagur.drivemate.user.model.User;
-import com.sagur.drivemate.user.service.UserProfileService;
 import com.sagur.drivemate.user.service.UserService;
 import com.sagur.drivemate.user.model.Address;
 import com.sagur.drivemate.user.repository.AddressRepository;
@@ -24,9 +23,6 @@ public class AddressServiceImpl extends AbstractService<Address, Long> implement
 
   /** The AddressRepository repository. */
   private AddressRepository repository;
-
-  @Autowired
-  private UserProfileService userProfileService;
 
   @Autowired
   private UserService userService;
@@ -55,7 +51,7 @@ public class AddressServiceImpl extends AbstractService<Address, Long> implement
     Optional<Address> address = repository.findByUserUsername(username);
     // or throw an exception if preferred
     DriverProfileDto dto =address.map(DriverProfileDto::new).orElseGet(DriverProfileDto::new);
-    userProfileService.findByUsername(username).ifPresent(userProfile ->{dto.setReferralCode(userProfile.getReferralCode());});
+//    userProfileService.findByUsername(username).ifPresent(userProfile ->{dto.setReferralCode(userProfile.getReferralCode());});
     return dto;
   }
 

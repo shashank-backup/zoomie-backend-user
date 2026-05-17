@@ -1,13 +1,19 @@
 package com.sagur.drivemate.user.controller.impl;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.sagur.drivemate.user.dto.DriverProfileDto;
 import com.sagur.drivemate.user.dto.DriverVerificationRequest;
+import com.sagur.product.common.document.dto.DocumentContext;
+import com.sagur.product.common.document.model.Document;
 import com.sagur.product.common.web.audit.AuditActionType;
 import com.sagur.product.common.web.audit.Auditable;
 import com.sagur.product.common.web.response.ResponseUtil;
@@ -61,5 +67,7 @@ public class AddressControllerImpl implements AddressController {
     log.info("@class AddressControllerImpl @method findDriverProfileByUsername @param address {}", username);
     return responseUtil.success(service.findDriverProfileByUsername(username));
   }
+
+
 
 }

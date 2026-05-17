@@ -1,11 +1,15 @@
 package com.sagur.drivemate.user.controller;
 
+import java.io.IOException;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -66,4 +70,6 @@ public interface AddressController {
       "AddressController"})
   ResponseDTO<DriverProfileDto> findDriverProfileByUsername(
       @Parameter(description = "username of User", name = "username", required = true) @RequestParam String username);
+
+
 }

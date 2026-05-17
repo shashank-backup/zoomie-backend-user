@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import com.sagur.product.common.utils.enums.Gender;
 import com.sagur.product.common.utils.enums.RoleName;
 import com.sagur.drivemate.user.model.User;
-import com.sagur.drivemate.user.model.UserProfile;
+//import com.sagur.drivemate.user.model.UserProfile;
 import com.sagur.drivemate.user.util.UserUtil;
 
 import lombok.Data;
@@ -41,18 +41,18 @@ public class UserProfileDto {
   private String referralCode;
 
 
-  public UserProfileDto(UserProfile userProfile) {
-    User user = userProfile.getUser();
-    this.username = user.getUsername();
-    this.contactNumber= user.getContactNumber();
-    this.email= user.getEmail();
-    this.fullName = user.getFullName();
-    this.gender= user.getGender();
-    this.dob= userProfile.getDob();
-    this.emergencyContact= userProfile.getEmergencyContact();
-    this.referralCode= userProfile.getReferralCode();
-    this.role= UserUtil.getRoleNames(user.getRoles()).stream().findFirst().orElse(null);
-  }
+//  public UserProfileDto(UserProfile userProfile) {
+//    User user = userProfile.getUser();
+//    this.username = user.getUsername();
+//    this.contactNumber= user.getContactNumber();
+//    this.email= user.getEmail();
+//    this.fullName = user.getFullName();
+//    this.gender= user.getGender();
+//    this.dob= userProfile.getDob();
+//    this.emergencyContact= userProfile.getEmergencyContact();
+//    this.referralCode= userProfile.getReferralCode();
+//    this.role= UserUtil.getRoleNames(user.getRoles()).stream().findFirst().orElse(null);
+//  }
 
 //
 //  private String street;
