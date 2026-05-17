@@ -15,7 +15,7 @@ public interface AddressService extends GenericService<Address, Long> {
   Optional<Address> findByUserId(Long userId);
 
   @Transactional(propagation = Propagation.NOT_SUPPORTED, readOnly = true)
-  DriverProfileDto findDriverProfileByUsername(String username);
+  DriverProfileDto findDriverAddressProfile();
 
   Address activateDriverUser(DriverVerificationRequest request);
 }

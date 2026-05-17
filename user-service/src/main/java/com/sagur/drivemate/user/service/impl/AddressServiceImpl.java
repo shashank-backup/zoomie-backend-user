@@ -7,12 +7,15 @@ import org.springframework.stereotype.Service;
 
 import com.sagur.drivemate.user.dto.DriverProfileDto;
 import com.sagur.drivemate.user.dto.DriverVerificationRequest;
+import com.sagur.drivemate.user.util.UserUtil;
+import com.sagur.product.common.utils.enums.RoleName;
 import com.sagur.product.common.utils.exceptions.BusinessException;
 import com.sagur.drivemate.user.model.User;
 import com.sagur.drivemate.user.service.UserService;
 import com.sagur.drivemate.user.model.Address;
 import com.sagur.drivemate.user.repository.AddressRepository;
 import com.sagur.drivemate.user.service.AddressService;
+import com.sagur.product.common.web.config.context.UserContextProvider;
 import com.sagur.product.generic.component.service.impl.AbstractService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -26,6 +29,9 @@ public class AddressServiceImpl extends AbstractService<Address, Long> implement
 
   @Autowired
   private UserService userService;
+
+  @Autowired
+  private UserContextProvider userContextProvider;
 
   /**
    * Sets the repository.
@@ -46,13 +52,14 @@ public class AddressServiceImpl extends AbstractService<Address, Long> implement
   }
 
   @Override
-  public DriverProfileDto findDriverProfileByUsername(String username) {
+  public DriverProfileDto findDriverAddressProfile() {
+    String username = userContextProvider.getUsername();
     log.debug("@class AddressServiceImpl @method findDriverProfileByUsername username:{}", username);
+    if(! UserUtil.isRoleMatched(userContextProvider.getRoles(), RoleName.DRIVER.toString())){
+      throw new com.sagur.product.common.utils.exceptions.AccessDeniedException();
+    }
     Optional<Address> address = repository.findByUserUsername(username);
-    // or throw an exception if preferred
-    DriverProfileDto dto =address.map(DriverProfileDto::new).orElseGet(DriverProfileDto::new);
-//    userProfileService.findByUsername(username).ifPresent(userProfile ->{dto.setReferralCode(userProfile.getReferralCode());});
-    return dto;
+    return address.map(DriverProfileDto::new).orElseGet(DriverProfileDto::new);
   }
 
   @Override

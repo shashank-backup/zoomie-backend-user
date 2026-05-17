@@ -65,11 +65,10 @@ public interface AddressController {
       @Parameter(description = "request dto", name = "request", required = true) @RequestBody DriverVerificationRequest request);
 
 
-  @GetMapping(path = "findDriverProfileByUsername")
-  @Operation(security = {@SecurityRequirement(name = SwaggerConstant.AUTHORIZATION_SCOPE_DEFAULT, scopes = {"API_Address_feat_findDriverProfileByUsername"})}, tags = {
+  @GetMapping(path = "findDriverAddressProfile")
+  @Operation(security = {@SecurityRequirement(name = SwaggerConstant.AUTHORIZATION_SCOPE_DEFAULT, scopes = {"API_Address_feat_findDriverAddressProfile"})}, tags = {
       "AddressController"})
-  ResponseDTO<DriverProfileDto> findDriverProfileByUsername(
-      @Parameter(description = "username of User", name = "username", required = true) @RequestParam String username);
+  ResponseDTO<DriverProfileDto> findDriverAddressProfile();
 
 
 }
