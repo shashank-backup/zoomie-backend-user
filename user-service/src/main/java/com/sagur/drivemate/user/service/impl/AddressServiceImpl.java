@@ -16,7 +16,7 @@ import com.sagur.drivemate.user.model.Address;
 import com.sagur.drivemate.user.repository.AddressRepository;
 import com.sagur.drivemate.user.service.AddressService;
 import com.sagur.product.common.web.config.context.UserContextProvider;
-import com.sagur.product.generic.component.service.impl.AbstractService;
+import com.sagur.product.common.generic.component.service.impl.AbstractService;
 
 import lombok.extern.slf4j.Slf4j;
 

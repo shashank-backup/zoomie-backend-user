@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.sagur.drivemate.user.model.Address;
-import com.sagur.product.generic.component.repository.GenericJpaRepository;
+import com.sagur.product.common.generic.component.repository.GenericJpaRepository;
 
 @Repository
 public interface AddressRepository extends GenericJpaRepository<Address, Long> {

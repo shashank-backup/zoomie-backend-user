@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.sagur.drivemate.user.model.UserSetting;
 import com.sagur.drivemate.user.repository.UserSettingRepository;
 import com.sagur.drivemate.user.service.UserSettingService;
-import com.sagur.product.generic.component.service.impl.AbstractService;
+import com.sagur.product.common.generic.component.service.impl.AbstractService;
 
 import lombok.extern.slf4j.Slf4j;
 

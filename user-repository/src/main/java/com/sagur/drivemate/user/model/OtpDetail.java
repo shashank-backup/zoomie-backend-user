@@ -20,7 +20,7 @@ import com.sagur.product.common.utils.constants.ColumnDefinitionConstant;
 import com.sagur.product.common.utils.constants.Constants;
 import com.sagur.product.common.utils.constants.Prefix;
 import com.sagur.drivemate.user.enums.OtpType;
-import com.sagur.product.generic.component.model.BaseEntity;
+import com.sagur.product.common.generic.component.model.BaseEntity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sagur.product.common.utils.constants.ColumnDefinitionConstant;
 import com.sagur.product.common.utils.constants.Constants;
 import com.sagur.product.common.utils.enums.Gender;
-import com.sagur.product.generic.component.model.BaseEntity;
+import com.sagur.product.common.generic.component.model.BaseEntity;
 
 import lombok.Data;
 
