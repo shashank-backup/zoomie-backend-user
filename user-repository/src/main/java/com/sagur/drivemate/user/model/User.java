@@ -83,12 +83,12 @@ public class User extends BaseEntity {
   @Deprecated
   @Column(name = "FULL_NAME")
   private String fullName;
-  @Deprecated
-  @Enumerated(EnumType.STRING)
-  @Column(name = "GENDER")
-  private Gender gender;
-  @Deprecated
-  @Column(name = "PIN_CODE")
-  private String pinCode;
+//  @Deprecated
+//  @Enumerated(EnumType.STRING)
+//  @Column(name = "GENDER")
+//  private Gender gender;
+//  @Deprecated
+//  @Column(name = "PIN_CODE")
+//  private String pinCode;
 
 }
