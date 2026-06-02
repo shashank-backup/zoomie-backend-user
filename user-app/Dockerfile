@@ -4,7 +4,7 @@
 #CMD ["java", "-jar", "user-app.jar"]
 
 
-FROM drivemate/java21-runtime:1.0.0
+FROM drivemate/java25-runtime:1.0.0
 
 COPY target/user-app-*.jar /app/user-app.jar
 
