@@ -37,8 +37,9 @@ public class OtpDetail extends BaseEntity implements Serializable {
 
   /** Primary key of OtpDetail. **/
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = Prefix.Sequence.NAME + Prefix.Table.COMMON + "OTP_DETAIL")
-  @SequenceGenerator(name = Prefix.Sequence.NAME + Prefix.Table.COMMON + "OTP_DETAIL", sequenceName = Prefix.Sequence.NAME + Prefix.Table.COMMON + "OTP_DETAIL", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = Prefix.Sequence.NAME + Prefix.Table.COMMON + "OTP_DETAIL")
+  //@SequenceGenerator(name = Prefix.Sequence.NAME + Prefix.Table.COMMON + "OTP_DETAIL", sequenceName = Prefix.Sequence.NAME + Prefix.Table.COMMON + "OTP_DETAIL", allocationSize = 1)
 
   @Column(name = "ID")
   private Long id;

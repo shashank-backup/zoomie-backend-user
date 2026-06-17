@@ -32,8 +32,9 @@ public class UserSetting extends BaseEntity {
 
   /** Primary key of UserSetting. **/
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = Prefix.Sequence.NAME + Prefix.Table.COMMON + "USER_SETTING")
-  @SequenceGenerator(name = Prefix.Sequence.NAME + Prefix.Table.COMMON + "USER_SETTING", sequenceName = Prefix.Sequence.NAME + Prefix.Table.COMMON + "USER_SETTING", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = Prefix.Sequence.NAME + Prefix.Table.COMMON + "USER_SETTING")
+  //@SequenceGenerator(name = Prefix.Sequence.NAME + Prefix.Table.COMMON + "USER_SETTING", sequenceName = Prefix.Sequence.NAME + Prefix.Table.COMMON + "USER_SETTING", allocationSize = 1)
   @Column(name = "ID")
   private Long id;
 

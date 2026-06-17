@@ -33,8 +33,8 @@ import lombok.Data;
 public class User extends BaseEntity {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY, generator = Constants.Sequences.USER)
-  @SequenceGenerator(name = Constants.Sequences.USER, sequenceName = Constants.Sequences.USER, allocationSize = 1)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+//  @SequenceGenerator(name = Constants.Sequences.USER, sequenceName = Constants.Sequences.USER, allocationSize = 1)
   @Column(name = "ID")
   private Long id;
 
