@@ -26,7 +26,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Entity
-@Table(name = Constants.Tables.OTP_DETAIL, uniqueConstraints = @UniqueConstraint(columnNames = {"USERNAME", "OTP_TYPE"}))
+@Table(name = Prefix.Table.USER + "OTP_DETAIL", uniqueConstraints = @UniqueConstraint(columnNames = {"USERNAME", "OTP_TYPE"}))
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Data
 @EqualsAndHashCode(callSuper = false)

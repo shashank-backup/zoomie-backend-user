@@ -21,7 +21,7 @@ import lombok.EqualsAndHashCode;
 
 @Entity
 @Audited
-@Table(name = Prefix.Table.COMMON + "USER_SETTING")
+@Table(name = Prefix.Table.USER + "USER_SETTING")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Data
 @EqualsAndHashCode(callSuper = false)

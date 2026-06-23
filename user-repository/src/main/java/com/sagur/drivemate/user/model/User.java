@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import com.sagur.product.common.utils.constants.ColumnDefinitionConstant;
 import com.sagur.product.common.utils.constants.Constants;
+import com.sagur.product.common.utils.constants.Prefix;
 import com.sagur.product.common.utils.enums.Gender;
 import com.sagur.product.common.generic.component.model.BaseEntity;
 
@@ -30,7 +31,7 @@ import lombok.EqualsAndHashCode;
 @Audited
 @Data
 @Entity
-@Table(name = Constants.Tables.USER)
+@Table(name = Prefix.Table.USER + "USER")
 @EqualsAndHashCode(callSuper = true)
 public class User extends BaseEntity {
 
