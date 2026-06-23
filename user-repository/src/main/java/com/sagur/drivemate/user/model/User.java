@@ -25,11 +25,13 @@ import com.sagur.product.common.utils.enums.Gender;
 import com.sagur.product.common.generic.component.model.BaseEntity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Audited
 @Data
 @Entity
 @Table(name = Constants.Tables.USER)
+@EqualsAndHashCode(callSuper = true)
 public class User extends BaseEntity {
 
   @Id
