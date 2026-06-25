@@ -13,8 +13,6 @@ public interface UserService {
 
   Optional<User> findByEmail(String email);
 
-//  List<Role> getAvailbaleRoles();
-
   Optional<User> findByContactNumber(String contactNumber);
 
   User createUser(User user);

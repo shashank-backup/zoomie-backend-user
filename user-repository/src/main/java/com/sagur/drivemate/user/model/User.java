@@ -12,7 +12,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 import org.hibernate.envers.Audited;
@@ -22,7 +21,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sagur.product.common.utils.constants.ColumnDefinitionConstant;
 import com.sagur.product.common.utils.constants.Constants;
 import com.sagur.product.common.utils.constants.Prefix;
-import com.sagur.product.common.utils.enums.Gender;
+import com.sagur.product.common.utils.enums.UserLoginType;
+import com.sagur.product.common.utils.enums.UserStatus;
 import com.sagur.product.common.generic.component.model.BaseEntity;
 
 import lombok.Data;
@@ -57,13 +57,6 @@ public class User extends BaseEntity {
   @Column(name = "COUNTRY_CODE")
   private String countryCode;
 
-  public enum UserStatus {
-    REGISTERED, // REGISTERED TO BE CHANGED WITH INACTIVE
-    ACTIVE,
-    INACTIVE,
-    BLOCKED
-  }
-
   @Column(name = "STATUS")
   @Enumerated(EnumType.STRING)
   private UserStatus status = UserStatus.ACTIVE;
@@ -72,11 +65,6 @@ public class User extends BaseEntity {
   @ManyToMany(fetch = FetchType.EAGER)
   @JoinTable(name = Constants.Tables.USER_ROLE, joinColumns = {@JoinColumn(name = "USER_FK")}, inverseJoinColumns = {@JoinColumn(name = "ROLE_FK")})
   private Set<Role> roles;
-
-  public enum UserLoginType {
-    INDIVIDUAL,
-    CORPORATE
-  }
 
   @Enumerated(EnumType.STRING)
   @Column(name = "USER_LOGIN_TYPE")

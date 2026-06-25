@@ -8,7 +8,7 @@ import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 import com.sagur.product.common.config.ApplicationContextProvider;
-import com.sagur.drivemate.user.event.UserRegistrationEvent;
+import com.sagur.product.common.utils.event.UserRegistrationEvent;
 import com.sagur.product.common.utils.exceptions.BusinessException;
 import com.sagur.product.common.config.json.JsonUtil;
 

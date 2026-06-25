@@ -49,4 +49,11 @@ public class UserUtil {
     return roles.contains(roleName);
   }
 
+  public static boolean isRoleMatched(Set<String> roles, String roleName) {
+    if(CollectionUtils.isEmpty(roles) || roleName == null) {
+      throw new BusinessException("Roles list and RoleName must not be null");
+    }
+    return roles.contains(roleName);
+  }
+
 }
