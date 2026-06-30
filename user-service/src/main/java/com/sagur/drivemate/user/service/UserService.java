@@ -17,4 +17,6 @@ public interface UserService {
 
   User createUser(User user);
 
+  User updatePassword(User user);
+
 }
