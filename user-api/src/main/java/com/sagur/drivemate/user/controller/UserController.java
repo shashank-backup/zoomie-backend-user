@@ -2,6 +2,7 @@ package com.sagur.drivemate.user.controller;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
@@ -86,9 +87,14 @@ public interface UserController {
 
   @GetMapping(path = "findByUsername")
   @Operation(security = {
-      @SecurityRequirement(name = SwaggerConstant.AUTHORIZATION_SCOPE_DEFAULT, scopes = {"API_User_feat_findByUsername"})}, tags = {
-      "UserController"})
+      @SecurityRequirement(name = SwaggerConstant.AUTHORIZATION_SCOPE_DEFAULT, scopes = {"API_User_feat_findByUsername"})}, tags = {"UserController"})
   ResponseDTO<User> findByUsername(
       @Parameter(description = "username of user", name = "username", required = true) @RequestParam(name = "username", required = true) String username);
+
+  @PostMapping(path = "blockUser")
+  @Operation(summary = "Block a user account", description = "Admin endpoint to block a user by username. Only admins can use this endpoint.", security = {
+      @SecurityRequirement(name = SwaggerConstant.AUTHORIZATION_SCOPE_DEFAULT, scopes = {"API_User_feat_blockUser"})}, tags = {"UserController"})
+  ResponseDTO<User> blockUser(
+      @Parameter(description = "username of user to block", name = "username", required = true) @RequestParam(name = "username") String username);
 
 }

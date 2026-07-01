@@ -5,12 +5,12 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.sagur.drivemate.user.dto.UserAuthDto;
 import com.sagur.drivemate.user.model.User;
 import com.sagur.drivemate.user.repository.UserRepository;
-import com.sagur.drivemate.user.service.RoleService;
 import com.sagur.drivemate.user.service.UserService;
-import com.sagur.drivemate.user.dto.UserAuthDto;
 import com.sagur.product.common.utils.exceptions.UserNotFoundException;
+import com.sagur.product.common.utils.enums.UserStatus;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,9 +20,6 @@ public class UserServiceImpl implements UserService {
 
   @Autowired
   private UserRepository repository;
-
-  @Autowired
-  private RoleService roleService;
 
   @Override
   public UserAuthDto findUserAuthByUsername(String username) {
@@ -50,10 +47,6 @@ public class UserServiceImpl implements UserService {
     return repository.findByContactNumber(contactNumber);
   }
 
-//  @Override
-//  public List<Role> getAvailbaleRoles() {
-//    return roleService.findAll();
-//  }
 
   @Override
   public User createUser(User user) {
@@ -64,5 +57,17 @@ public class UserServiceImpl implements UserService {
   public User updatePassword(User user) {
     return repository.save(user);
   }
+
+  @Override
+  public User blockUser(String username) {
+    log.info("@class UserServiceImpl @method blockUser @param username {}", username);
+    User user = findByUsername(username).orElseThrow(() -> new UserNotFoundException("User with username " + username + " not found"));
+    user.setStatus(UserStatus.BLOCKED);
+    User blockedUser = repository.save(user);
+    log.info("User {} has been blocked successfully", username);
+    return blockedUser;
+  }
+
+
 
 }

@@ -5,6 +5,9 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sagur.product.common.utils.exceptions.UserNotFoundException;
 import com.sagur.drivemate.user.model.User;
@@ -64,6 +67,14 @@ public class UserControllerImpl implements UserController {
   public ResponseDTO<User> findByUsername(String username) {
     log.info("@class UserControllerImpl @method findByUsername @param username {}", username);
     return responseUtil.successNew(service.findByUsername(username).orElseThrow(UserNotFoundException::new));
+  }
+
+  @Override
+  @PreAuthorize("hasRole('ADMIN')")
+  public ResponseDTO<User> blockUser(String username) {
+    log.info("@class UserControllerImpl @method blockUser @param username {}", username);
+    User blockedUser = service.blockUser(username);
+    return responseUtil.successNew(blockedUser);
   }
 
 }

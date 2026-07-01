@@ -19,4 +19,6 @@ public interface UserService {
 
   User updatePassword(User user);
 
+  User blockUser(String username);
+
 }
