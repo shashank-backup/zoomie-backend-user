@@ -54,18 +54,26 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  public User updatePassword(User user) {
-    return repository.save(user);
+  public void updatePassword(User user) {
+    repository.save(user);
   }
 
   @Override
-  public User blockUser(String username) {
+  public void blockUser(String username) {
     log.info("@class UserServiceImpl @method blockUser @param username {}", username);
     User user = findByUsername(username).orElseThrow(() -> new UserNotFoundException("User with username " + username + " not found"));
     user.setStatus(UserStatus.BLOCKED);
-    User blockedUser = repository.save(user);
+    repository.save(user);
     log.info("User {} has been blocked successfully", username);
-    return blockedUser;
+  }
+
+  @Override
+  public void unblockUser(String username) {
+    log.info("@class UserServiceImpl @method unblockUser @param username {}", username);
+    User user = findByUsername(username).orElseThrow(() -> new UserNotFoundException("User with username " + username + " not found"));
+    user.setStatus(UserStatus.ACTIVE);
+    repository.save(user);
+    log.info("User {} has been unblocked successfully", username);
   }
 
 

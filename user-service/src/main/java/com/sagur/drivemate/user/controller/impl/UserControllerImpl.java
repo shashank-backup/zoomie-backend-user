@@ -6,8 +6,6 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sagur.product.common.utils.exceptions.UserNotFoundException;
 import com.sagur.drivemate.user.model.User;
@@ -71,10 +69,18 @@ public class UserControllerImpl implements UserController {
 
   @Override
   @PreAuthorize("hasRole('ADMIN')")
-  public ResponseDTO<User> blockUser(String username) {
+  public ResponseDTO<?> blockUser(String username) {
     log.info("@class UserControllerImpl @method blockUser @param username {}", username);
-    User blockedUser = service.blockUser(username);
-    return responseUtil.successNew(blockedUser);
+    service.blockUser(username);
+    return responseUtil.successNew(null,"User has been blocked");
+  }
+
+  @PreAuthorize("hasRole('ADMIN')")
+  @Override
+  public ResponseDTO<?> unblockUser(String username) {
+    log.info("@class UserControllerImpl @method unblockUser @param username {}", username);
+    service.unblockUser(username);
+    return responseUtil.successNew(null,"User has been unblocked");
   }
 
 }

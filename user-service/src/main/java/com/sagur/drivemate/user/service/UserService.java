@@ -17,8 +17,9 @@ public interface UserService {
 
   User createUser(User user);
 
-  User updatePassword(User user);
+  void updatePassword(User user);
 
-  User blockUser(String username);
+  void blockUser(String username);
 
+  void unblockUser(String username);
 }

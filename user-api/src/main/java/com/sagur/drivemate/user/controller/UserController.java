@@ -1,6 +1,7 @@
 package com.sagur.drivemate.user.controller;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -94,7 +95,12 @@ public interface UserController {
   @PostMapping(path = "blockUser")
   @Operation(summary = "Block a user account", description = "Admin endpoint to block a user by username. Only admins can use this endpoint.", security = {
       @SecurityRequirement(name = SwaggerConstant.AUTHORIZATION_SCOPE_DEFAULT, scopes = {"API_User_feat_blockUser"})}, tags = {"UserController"})
-  ResponseDTO<User> blockUser(
+  ResponseDTO<?> blockUser(
       @Parameter(description = "username of user to block", name = "username", required = true) @RequestParam(name = "username") String username);
 
+  @PostMapping(path = "unblockUser")
+  @Operation(summary = "Unblock a user account", description = "Admin endpoint to unblock a user by username. Only admins can use this endpoint.", security = {
+      @SecurityRequirement(name = SwaggerConstant.AUTHORIZATION_SCOPE_DEFAULT, scopes = {"API_User_feat_unblockUser"})}, tags = {"UserController"})
+  ResponseDTO<?> unblockUser(
+      @Parameter(description = "username of user to unblock", name = "username", required = true) @RequestParam(name = "username") String username);
 }
