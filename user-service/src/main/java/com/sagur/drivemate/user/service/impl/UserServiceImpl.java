@@ -11,6 +11,8 @@ import com.sagur.drivemate.user.repository.UserRepository;
 import com.sagur.drivemate.user.service.UserService;
 import com.sagur.product.common.utils.exceptions.UserNotFoundException;
 import com.sagur.product.common.utils.enums.UserStatus;
+import com.sagur.product.common.utils.utility.PermissionUtil;
+import com.sagur.product.common.web.config.context.UserContextProvider;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,6 +22,9 @@ public class UserServiceImpl implements UserService {
 
   @Autowired
   private UserRepository repository;
+
+  @Autowired
+  private UserContextProvider userContextProvider;
 
   @Override
   public UserAuthDto findUserAuthByUsername(String username) {
@@ -61,6 +66,7 @@ public class UserServiceImpl implements UserService {
   @Override
   public void blockUser(String username) {
     log.info("@class UserServiceImpl @method blockUser @param username {}", username);
+    PermissionUtil.requireAdminSupportRole(userContextProvider.getRoles());
     User user = findByUsername(username).orElseThrow(() -> new UserNotFoundException("User with username " + username + " not found"));
     user.setStatus(UserStatus.BLOCKED);
     repository.save(user);
@@ -70,6 +76,7 @@ public class UserServiceImpl implements UserService {
   @Override
   public void unblockUser(String username) {
     log.info("@class UserServiceImpl @method unblockUser @param username {}", username);
+    PermissionUtil.requireAdminSupportRole(userContextProvider.getRoles());
     User user = findByUsername(username).orElseThrow(() -> new UserNotFoundException("User with username " + username + " not found"));
     user.setStatus(UserStatus.ACTIVE);
     repository.save(user);
