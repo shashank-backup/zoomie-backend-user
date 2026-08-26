@@ -3,9 +3,9 @@
 
     <property name="LOG_DIR" value="${LOG_PATH:-logs}" />
     <property name="CONSOLE_LOG_PATTERN"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) [%thread] %cyan([%X{traceId:-},%X{spanId:-}]) %logger{36} - %msg%n" />
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) [%thread] %cyan([%X{traceId:-},%X{spanId:-}]) [%X{user.name:-}] [%X{bookingId:-}] %logger{36} - %msg%n" />
     <property name="FILE_LOG_PATTERN"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%X{traceId:-},%X{spanId:-}] %logger{36} - %msg%n" />
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [%X{traceId:-},%X{spanId:-}] [%X{user.name:-}] [%X{bookingId:-}] %logger{36} - %msg%n" />
 
     <!-- 1. Console Appender -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
