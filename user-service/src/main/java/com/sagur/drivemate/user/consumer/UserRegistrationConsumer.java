@@ -5,6 +5,7 @@ import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.messaging.handler.annotation.Payload;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 import com.sagur.product.common.config.ApplicationContextProvider;
@@ -16,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Component
 @Slf4j
+@ConditionalOnProperty(name = "zoomie.kafka.enabled", havingValue = "true", matchIfMissing = true)
 public class UserRegistrationConsumer {
 
   @KafkaListener(topics = "${kafka.topic.user-registration-topic}", groupId = "${kafka.consumer.group-id.user-registration}")
