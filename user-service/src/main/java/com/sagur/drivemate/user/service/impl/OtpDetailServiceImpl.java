@@ -13,6 +13,7 @@ import com.sagur.product.common.utils.exceptions.BadCredentialsException;
 import com.sagur.drivemate.user.model.OtpDetail;
 import com.sagur.drivemate.user.repository.OtpDetailRepository;
 import com.sagur.drivemate.user.service.OtpDetailService;
+import com.sagur.product.common.utils.utility.CommonUtil;
 import com.sagur.product.common.utils.utility.Validate;
 
 import lombok.extern.slf4j.Slf4j;
@@ -23,8 +24,6 @@ public class OtpDetailServiceImpl implements OtpDetailService {
 
   /** The OtpDetailRepository repository. */
   private OtpDetailRepository repository;
-
-  private static final SecureRandom SECURE_RANDOM = new SecureRandom();
 
   /**
    * Sets the repository.
@@ -58,20 +57,10 @@ public class OtpDetailServiceImpl implements OtpDetailService {
 
   @Override
   public int generateOtp(int length) {
-    return generateSecureOtp(length);
+    return CommonUtil.generateSecureOtp(length);
   }
 
-  private int generateSecureOtp(int length) {
-    StringBuilder otp = new StringBuilder(length);
-    for(int i = 0; i < length; i++) {
-      otp.append(SECURE_RANDOM.nextInt(10)); // Generate a random digit
-    }
-    if(otp.charAt(0)=='0') {
-      // Ensure OTP does not start with zero
-      otp.setCharAt(0, (char) ('1' + SECURE_RANDOM.nextInt(9))); // Replace first digit with a non-zero digit
-    }
-    return Integer.parseInt(otp.toString());
-  }
+
 
   private boolean isExpired(LocalDateTime storedTime) {
     return storedTime.isBefore(LocalDateTime.now());
